@@ -24,12 +24,12 @@ $doc->addScriptDeclaration("
 				);
 		});
 		$('
-		    <div id=\"modal_stas\"><!-- Сaмo oкнo --> 
-                <span id=\"modal_close_stas\">X</span> <!-- Кнoпкa зaкрыть --> 
-                <!-- Тут любoе сoдержимoе -->
-                <form></form>
-            </div>
-            <div id=\"overlay_stas\"></div><!-- Пoдлoжкa -->
+		<div id=\"modal_stas\"><!-- Сaмo oкнo --> 
+		    <span id=\"modal_close_stas\">X</span> <!-- Кнoпкa зaкрыть --> 
+		    <!-- Тут любoе сoдержимoе -->
+		    <form></form>
+		</div>
+		<div id=\"overlay_stas\"></div><!-- Пoдлoжкa -->
 		').insertAfter('#main');
 	});
 ");
