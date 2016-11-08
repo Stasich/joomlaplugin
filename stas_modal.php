@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
 
 $doc = JFactory::getDocument();
 $doc->addHeadLink ("view-source:http://xn--h1aaljkbdi.xn--p1ai/promo/",'stylesheet');
-$doc->addScriptDeclaration('
+$doc->addScriptDeclaration("
 	$(document).ready(function() {
 		$('.addtocart-button').click(function(){
 			$('#overlay_stas').fadeIn(400,
@@ -24,7 +24,7 @@ $doc->addScriptDeclaration('
 				)
 		})
 	});
-');
+");
 
 ?>
 
