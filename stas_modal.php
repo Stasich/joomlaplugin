@@ -2,7 +2,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 $doc = JFactory::getDocument();
-$doc->addHeadLink ("view-source:http://xn--h1aaljkbdi.xn--p1ai/promo/",'stylesheet');
+$doc->addStyleSheet ("http://xn--h1aaljkbdi.xn--p1ai/promo/css/stas.css");
 $doc->addScriptDeclaration("
 	$(document).ready(function() {
 		$('.addtocart-button').click(function(){
