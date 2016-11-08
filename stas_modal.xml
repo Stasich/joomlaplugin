@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+  <name>stas_modal</name>
+  <creationDate>no 2016</creationDate>
+  <author>Stasich1</author>
+  <authorEmail>mail.ru</authorEmail>
+  <authorUrl>mail.ru</authorUrl>
+  <version>0.0.1</version>
+  <administration>
+    <menu>stas_modal</menu>
+  </administration>
+</extension>
