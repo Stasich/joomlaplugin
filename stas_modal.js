@@ -20,5 +20,26 @@ $(document).ready(function () {
                 }
             );
     });
-    $("<div id='modal_stas'>    <span id='modal_close_stas'>X</span><form></form></div><div id='overlay_stas'></div>").insertAfter("#main");
+    $("<div id='modal_stas'> " +
+        "<span id='modal_close_stas'>X</span>" +
+        "<div><p class='stasformtext_stas_modal'>Заполните форму, что бы узнать актуальные цены!</p></div>"+
+        "<form class='form-horizontal' method='post' action='http://xn--h1aaljkbdi.xn--p1ai/mail.php'>" +
+            "<div class='form-groups_stas_modal'>" +
+                "<label class='labelstas_stas_modal' for='name'>Имя:</label>" +
+                "<div><input name='name' required='' type='text' placeholder='Введите Имя*' /></div>" +
+             "</div>" +
+            "<div class='form-groups_stas_modal'>" +
+                "<label class='labelstas_stas_modal' for='email'>Email:</label>" +
+                "<div><input id='email' class='' name='email' required='' type='email' placeholder='Введите email*' /></div>" +
+            "</div>" +
+            "<div class='form-groups_stas_modal'>" +
+                "<label class='labelstas_stas_modal' for='textarea'>Текст:</label>" +
+                "<div><textarea id='textarea' class='' name='mess' rows='3' placeholder='Какой товар вас интересует?*'></textarea></div>" +
+            "</div>" +
+            "<div class='form-groups_stas_modal'>" +
+                "<div class='stasformbut_stas_modal'><input type='submit' value='Отправить' /></div>" +
+            "</div>" +
+        "</form>" +
+      "</div>" +
+    "<div id='overlay_stas'></div>").insertAfter("#main");
 });
