@@ -13,13 +13,7 @@ $(document).ready(function () {
         );
     });
     $('#modal_close_stas, #overlay_stas').click(function () {
-        $('#modal_stas')
-            .animate({opacity: 0, top: '45%'}, 200,
-                function () {
-                    $(this).css('display', 'none');
-                    $('#overlay_stas').fadeOut(400);
-                }
-            );
+        $('#modal_stas, #overlay_stas').css('display', 'none');
     });
     $("<div id='modal_stas'> " +
         "<span id='modal_close_stas'>X</span>" +
