@@ -29,7 +29,7 @@ $(document).ready(function () {
             "</div>" +
             "<div class='form-groups_stas_modal'>" +
                 "<label class='labelstas_stas_modal' for='textarea'>Текст:</label>" +
-                "<div><textarea id='textarea' class='' name='mess' rows='3' placeholder='Какой товар вас интересует?*'></textarea></div>" +
+                "<div><textarea id='textarea_stas_modal' class='' name='mess' rows='3' placeholder='Какой товар вас интересует?*'></textarea></div>" +
             "</div>" +
             "<div class='form-groups_stas_modal'>" +
                 "<div class='stasformbut_stas_modal'><input type='submit' value='Отправить' /></div>" +
