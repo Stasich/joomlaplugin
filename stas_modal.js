@@ -2,7 +2,8 @@
  * Created by stas on 09.11.2016.
  */
 $(document).ready(function () {
-    $('.addtocart-button').click(function () {
+    $('input[name=addtocart]').attr('type','button');
+    $('span.addtocart-button').click(function () {
         $('#overlay_stas').fadeIn(400,
             function () {
                 $('#modal_stas')
