@@ -12,9 +12,7 @@ $(document).ready(function () {
             }
         );
     });
-    $('#modal_close_stas, #overlay_stas').click(function () {
-        $('#modal_stas, #overlay_stas').css('display', 'none');
-    });
+
     $("<div id='modal_stas'> " +
         "<span id='modal_close_stas'>X</span>" +
         "<div><p class='stasformtext_stas_modal'>Заполните форму, что бы узнать актуальные цены!</p></div>"+
@@ -37,4 +35,8 @@ $(document).ready(function () {
         "</form>" +
       "</div>" +
     "<div id='overlay_stas'></div>").insertAfter("#main");
+
+    $('#modal_close_stas, #overlay_stas').click(function () {
+        $('#modal_stas, #overlay_stas').css('display', 'none');
+    });
 });
