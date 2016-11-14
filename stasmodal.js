@@ -41,6 +41,7 @@ $(document).ready(function () {
     });
     $('#stas_button').click(function () {
         $.post('mail.php', function () {
+        })
             .done(function() {
                 $('#modal_stas, #overlay_stas').css('display', 'none');
                 alert( "Ваша заявка отправленна! В течении дня менеджер ответит Вам на указанную почту." );
@@ -48,6 +49,5 @@ $(document).ready(function () {
             .fail(function(){
                 alert ("Что-то пошло не так. Повторите пожалуйста отправку сообщения или напишите свою заявку нам на почту: info@estudo.ru");
             });
-        });
-     });
+    });
 });
