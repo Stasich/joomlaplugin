@@ -26,6 +26,7 @@
 		<filename plugin="stasmodal">mail.php</filename>
 		<filename plugin="stasmodal">README.md</filename>
 		<filename plugin="stasmodal">script.php</filename>
+		<filename plugin="stasmodal">stas.css</filename>
 		<filename plugin="stasmodal">stasmodal.js</filename>
 		<folder>language</folder>
 	</files>
