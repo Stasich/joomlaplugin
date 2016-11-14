@@ -43,4 +43,4 @@ file_put_contents($file, $text, FILE_APPEND | LOCK_EX);
 mail($to, $subject, $message) or print "Не могу отправить письмо !!!";
 /*echo "<center><b>Спасибо за отправку Вашего сообщения. <a href=index.html>Нажмите</a>, что бы вернуться на главную... <br>Либо перейти на один из наших сайтов: <a href=\"http://www.estudo.ru/\" target=\"_blank\">ESTUDO.RU</a>,  <a href=\"http://xn--h1aaljkbdi.xn--p1ai/\" target=\"_blank\">СИМИСТОР.РФ</a> ";
 http://xn--h1aaljkbdi.xn--p1ai/index.php?option=com_content&view=article&id=29 */
-header('Location: http://xn--h1aaljkbdi.xn--p1ai/index.php?option=com_content&view=article&id=29/');
+

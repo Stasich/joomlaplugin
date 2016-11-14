@@ -19,11 +19,11 @@ $(document).ready(function () {
         "<form class='form-horizontal' method='post' action='/plugins/content/stasmodal/mail.php'>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='name'>Имя:</label>" +
-                "<div><input name='name' required='' type='text' placeholder='Введите Имя*' /></div>" +
+                "<div><input id='name_stasmodal' name='name' required='' type='text' placeholder='Введите Имя*' /></div>" +
              "</div>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='email'>Email:</label>" +
-                "<div><input id='email' class='' name='email' required='' type='email' placeholder='Введите email*' /></div>" +
+                "<div><input id='email_stasmodal' class='' name='email' required='' type='email' placeholder='Введите email*' /></div>" +
             "</div>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='textarea'>Текст:</label>" +
@@ -34,18 +34,23 @@ $(document).ready(function () {
             "</div>" +
         "</form>" +
       "</div>" +
-    "<div id='overlay_stas'></div>" +
-    "<div id='modal_stas_sucks'>" +
-        "<span id='modal_close_stas'>X</span>" +
-        "<div><p class='stas_sucks_text'>Ваша заявка отправленна! В течении для менеджер ответит Вам на указанную почту.</p></div>" +
-        "" +
-    "</div>").insertAfter("#main");
+    "<div id='overlay_stas'></div>").insertAfter("#main");
 
     $('#modal_close_stas, #overlay_stas').click(function () {
         $('#modal_stas, #overlay_stas').css('display', 'none');
     });
     $('#stas_button').click(function () {
-        $('#modal_stas').css('display', 'none');
-        $('#modal_stas_sucks').css('display', 'block');
+        $.post('/plugins/content/stasmodal/mail.php', {
+            name: $('#name_stasmodal').val(),
+            email: $('#email_stasmodal').val(),
+            mess: $('#textarea_stasmodal').val()
+        })
+            .done(function() {
+                $('#modal_stas, #overlay_stas').css('display', 'none');
+                alert( "Ваша заявка отправленна! В течении дня менеджер ответит Вам на указанную почту." );
+            })
+            .fail(function(){
+                alert ("Что-то пошло не так. Повторите пожалуйста отправку сообщения или напишите свою заявку нам на почту: info@estudo.ru");
+            });
     });
 });
