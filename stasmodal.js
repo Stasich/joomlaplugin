@@ -16,7 +16,7 @@ $(document).ready(function () {
     $("<div id='modal_stas'> " +
         "<span id='modal_close_stas'>X</span>" +
         "<div><p class='stasformtext_stasmodal'>Заполните форму, что бы узнать актуальные цены!</p></div>"+
-        "<form class='form-horizontal' method='post' action='javascript:0'>" +
+        "<form class='form-horizontal' method='post' action='/plugins/content/stasmodal/mail.php'>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='name'>Имя:</label>" +
                 "<div><input name='name' required='' type='text' placeholder='Введите Имя*' /></div>" +
