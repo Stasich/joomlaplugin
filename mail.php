@@ -29,7 +29,7 @@ $subject = "Сообщение с вашего интернет-сайта";
 $subject = iconv("UTF-8", "KOI8-R", "$subject"); /*тут короч с кодировкой прост беда, почта не читает*/
 $message = "Имя пославшего: $name \nЭлектронный адрес: $email \nСообщение: $mess";
 // Пишу в файл для проверки
-$file = 'dokodirivki.txt';
+//$file = 'dokodirivki.txt';
 // текст который добавлю
 $text = "$message \n";
 file_put_contents($file, $text, FILE_APPEND | LOCK_EX);

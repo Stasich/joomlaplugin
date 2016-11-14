@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.5" type="plugin" group="system" method="upgrade">
+<extension version="3.5" type="plugin" group="content" method="upgrade">
 	<name>PLG_STASMODAL</name>
 	<creationDate>11.11.2016</creationDate>
 	<author>stas</author>
@@ -22,6 +22,9 @@
 	<!-- Plugin files -->
 	<files>
 		<filename plugin="stasmodal">stasmodal.php</filename>
+		<filename plugin="stasmodal">jquery-3.1.1.min.js</filename>
+		<filename plugin="stasmodal">script.php</filename>
+		<filename plugin="stasmodal">stasmodal.js</filename>
 		<folder>language</folder>
 	</files>
 
@@ -41,7 +44,5 @@
 	</config>
 
 	<!-- Update servers -->
-	<updateservers>
-		<server type="extension" priority="1" name="stasmodal">https://www.example.com/plg_stasmodal.xml</server>
-	</updateservers>
+
 </extension>
