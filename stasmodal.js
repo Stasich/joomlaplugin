@@ -19,11 +19,11 @@ $(document).ready(function () {
         "<form class='form-horizontal' method='post' action='javascript:0'>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='name'>Имя:</label>" +
-                "<div><input name='name' required='' type='text' placeholder='Введите Имя*' /></div>" +
+                "<div><input id='name_stasmodal' name='name' required='' type='text' placeholder='Введите Имя*' /></div>" +
              "</div>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='email'>Email:</label>" +
-                "<div><input id='email' class='' name='email' required='' type='email' placeholder='Введите email*' /></div>" +
+                "<div><input id='email_stasmodal' class='' name='email' required='' type='email' placeholder='Введите email*' /></div>" +
             "</div>" +
             "<div class='form-groups_stasmodal'>" +
                 "<label class='labelstas_stasmodal' for='textarea'>Текст:</label>" +
@@ -40,7 +40,10 @@ $(document).ready(function () {
         $('#modal_stas, #overlay_stas').css('display', 'none');
     });
     $('#stas_button').click(function () {
-        $.post('mail.php', function () {
+        $.post('/plugins/content/stasmodal/mail.php', {
+            name: $('#name_stasmodal').val(),
+            email: $('#email_stasmodal').val(),
+            mess: $('#textarea_stasmodal').val()
         })
             .done(function() {
                 $('#modal_stas, #overlay_stas').css('display', 'none');
