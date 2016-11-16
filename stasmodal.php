@@ -129,7 +129,6 @@ class plgContentStasmodal extends JPlugin
     public function  onContentPrepare() {
         $doc = JFactory::getDocument();
         $doc->addStyleSheet(JUri::root() . 'plugins/content/stasmodal/stas.css');
-        $doc->addScript(JUri::root() . 'plugins/content/stasmodal/jquery-3.1.1.min.js');
         $doc->addScript(JUri::root() . 'plugins/content/stasmodal/stasmodal.js');
     }
 }
