@@ -16,7 +16,7 @@ defined('_JEXEC') or die;
  * @package  stasmodal
  * @since    1.0
  */
-class plgSystemStasmodal extends JPlugin
+class plgContentStasmodal extends JPlugin
 {
 	/**
 	 * Application object
