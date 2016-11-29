@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
     });
 
     jQuery("<div id='modal_stas'> " +
-        "<span id='modal_close_stas'>X</span>" +
+        "<button id='modal_close_stas'>×</button>" +
         "<div><p class='stasformtext_stasmodal'>Заполните форму, что бы узнать актуальные цены!</p></div>"+
         "<form id='stas_modal_form' class='form-horizontal' method='post' action='javascript:0'>" +
             "<div class='form-groups_stasmodal'>" +
@@ -34,10 +34,15 @@ jQuery(document).ready(function () {
             "</div>" +
         "</form>" +
       "</div>" +
-    "<div id='overlay_stas'></div>").insertAfter("#main");
+    "<div id='overlay_stas'></div>" +
+    "<div id='stas_otpravleno'><button id='otpravleno_close_stas'>×</button>" +
+            "<div class='div_otpr'><p class='stas_otpravleno_zagol'>Ваша заявка отправленна!</p>" +
+                "<p class='stas_otpravleno_text'>В течении дня менеджер ответит Вам на указанную почту.</p></div>" +
+            "<div id='div_ok'><button id='otpr_ok'>ОК</button></div>" +
+        "</div>").insertAfter("#main");
 
-    jQuery('#modal_close_stas, #overlay_stas').click(function () {
-        jQuery('#modal_stas, #overlay_stas').css('display', 'none');
+    jQuery('#modal_close_stas, #overlay_stas, #otpravleno_close_stas, #div_ok').click(function () {
+        jQuery('#modal_stas, #overlay_stas, #stas_otpravleno').css('display', 'none');
     });
     jQuery('#stas_modal_form').submit(function () {
         jQuery.post('/plugins/content/stasmodal/mail.php', {
@@ -46,8 +51,8 @@ jQuery(document).ready(function () {
             mess: jQuery('#textarea_stasmodal').val()
         })
             .done(function() {
-                jQuery('#modal_stas, #overlay_stas').css('display', 'none');
-                alert( "Ваша заявка отправленна! В течении дня менеджер ответит Вам на указанную почту." );
+                jQuery('#modal_stas').css('display', 'none');
+                jQuery('#stas_otpravleno').css('display', 'block').animate({opacity: 1, top: '50%'}, 200);
             })
             .fail(function(){
                 alert ("Что-то пошло не так. Повторите пожалуйста отправку сообщения или напишите свою заявку нам на почту: info@estudo.ru");
