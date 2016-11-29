@@ -100,7 +100,7 @@ class plgContentStasmodal extends JPlugin
 	 */
 	public function onAfterCompileHead()
 	{
-	
+
 	}
 
 	/**
